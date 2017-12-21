@@ -50,7 +50,7 @@ namespace TCP_Client
                     send_button.Text = "Disconnect";
                 }
 
-                catch (Exception ex)
+                catch (Exception)
                 {
                     listBox1.Items.Add("Błąd: Nie udało się nawiązać połączenia!");
                 }
