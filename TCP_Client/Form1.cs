@@ -8,6 +8,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Sockets;
+using System.IO;
+
+
+
 namespace TCP_Client
 {
     public partial class Form1 : Form
@@ -32,6 +36,16 @@ namespace TCP_Client
                 {
                     klient = new TcpClient(host, port);
                     listBox1.Items.Add("Nawiązano połączenie z " + host + " na porcie:" + port);
+                    listBox1.Update();
+                    NetworkStream ns = klient.GetStream();
+                    StreamReader reader = new StreamReader(ns); //czyta ze strumienia wysłanego przez serwer 
+                    char[] znaki = new char[100];
+                    reader.Read(znaki, 0, 100);
+                    string komunikat = new string(znaki); //ASCII jest zamieniane na text
+                    listBox1.Items.Add("  " + komunikat);
+                    listBox1.Update();
+                    ns.Close();
+
                     is_clicked = true;
                     send_button.Text = "Disconnect";
                 }
