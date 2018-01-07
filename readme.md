@@ -1,12 +1,12 @@
-#TCP_Server & TCP_Client
+# TCP_Server & TCP_Client
 
-##Jak uruchomiæ
+## Jak uruchomiæ
 
 1. Sklonuj repo
 2. Uruchom TCP_Client.sln w Visual Studio
 3. Skompiluj projekt
 
-##Jak przetestowaæ
+## Jak przetestowaæ
 
 Do poprawnego dzia³ania jak i przetestowania wymagane jest u¿ycie obu programów. 
 
@@ -21,6 +21,6 @@ Do poprawnego dzia³ania jak i przetestowania wymagane jest u¿ycie obu programów.
 9. Jeœli po³¹czenie zosta³o nawi¹zane w kliencie powinna wyœwietliæ siê wiadomoœæ ustawiona na serwerze. 
 
 
-##TODO - Pomys³y na rozwój projektu
+## TODO - Pomys³y na rozwój projektu
 
 1. Zaimplementowaæ mo¿liwoœæ nawi¹zywania wielu po³¹czeñ.
